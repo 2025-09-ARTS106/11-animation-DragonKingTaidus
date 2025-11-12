@@ -12,7 +12,7 @@ public class ChangeDirection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     anim = GetComponent<Animator>();   
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,10 +23,22 @@ public class ChangeDirection : MonoBehaviour
 
         if (horizontalMove < 0)
         {
-            anim.SetInteger("Direction", 3);
+            anim.SetInteger("Direction", 1);
         }
         if (horizontalMove > 0)
         {
-            anim.SetInteger("Direction", 1);
+            anim.SetInteger("Direction", 3);
+        }
+        //addverticalmovementhere
+      if (verticalMove < 0)
+        {
+            anim.SetInteger("Direction", 0);
+        }
+      if (verticalMove > 0)
+        {
+            anim.SetInteger("Direction", 2);
         }
 
+
+    }
+}
